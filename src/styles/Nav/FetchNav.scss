@@ -1,0 +1,24 @@
+/* Style the links inside the navigation bar */
+.fetch-nav a {
+    // float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 1px 2px;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+/* Change the color of links on hover */
+.fetch-nav a:hover {
+    background-color: #ddd;
+    color: black;
+    border-radius: 8px;
+}
+
+/* Add a color to the active/current link */
+.fetch-nav a.active {
+    // background-color: #7bed9f;
+    background-color: #90c815;
+    color: #f41e0e;
+    border-radius: 8px;
+}

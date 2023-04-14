@@ -11,10 +11,22 @@ import ReactDOM from 'react-dom';
 import App from './views/App';
 import reportWebVitals from './reportWebVitals';
 import './styles/global.scss';
+//redux
+import { Provider } from 'react-redux';
+import { createStore } from 'redux';
+import rootReducer from './store/reducers/rootReducer';
+
+//create reduxStore = createStore function, The data which we recharge is rootReducer 
+const reduxStore = createStore(rootReducer);
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    {/* Provider permits the Redux and React to start at the same time*/}
+    {/* We must recharge(reduxStore) into the store */}
+    <Provider store={reduxStore}>
+      <App />
+    </Provider>
+
   </React.StrictMode>,
   document.getElementById('root')
 );
