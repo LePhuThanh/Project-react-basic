@@ -6,6 +6,7 @@ import Home from '../components/Home';
 import ListUser from '../components/Users/ListUser';
 import DetailUser from '../components/Users/DetailUser';
 import FetchTotal from '../components/Fetchs/FetchTotal';
+import HookExample from "../components/Hooks/HookExample";
 
 //react-toastify
 import { ToastContainer } from 'react-toastify';
@@ -20,6 +21,7 @@ import {
 
 
 const App = () => {
+
   return (
     <Router>
       <div className="App">
@@ -48,6 +50,10 @@ const App = () => {
             <Route path="/fetchtotal">
               <FetchTotal />
             </Route>
+            <Route path="/hook">
+              <HookExample />
+            </Route>
+
           </Switch>
 
         </header>

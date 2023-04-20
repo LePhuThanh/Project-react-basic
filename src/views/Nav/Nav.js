@@ -25,6 +25,9 @@ class Nav extends React.Component {
                 <NavLink to="/fetchtotal" activeClassName="active">
                     Fetch The Data
                 </NavLink>
+                <NavLink to="/hook" activeClassName="active">
+                    Hook
+                </NavLink>
 
                 {/* <a href="#about">About</a> */}
             </div>

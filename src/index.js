@@ -19,6 +19,7 @@ import rootReducer from './store/reducers/rootReducer';
 //create reduxStore = createStore function, The data which we recharge is rootReducer 
 const reduxStore = createStore(rootReducer);
 
+
 ReactDOM.render(
   <React.StrictMode>
     {/* Provider permits the Redux and React to start at the same time*/}

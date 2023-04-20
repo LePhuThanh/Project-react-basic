@@ -15,6 +15,16 @@ class Home extends React.Component {
     //     }, 3000)
     //     // Run code after 3s
     // }
+    componentDidMount() {
+        setTimeout(() => {
+            console.log('>>> call me component did mount')
+            //change title of the header after 3s
+            document.title = 'Tutorials About React'
+        }, 2000);
+    }
+    componentDidUpdate(prevProps, prevState, snapshot) {
+        console.log('>>> call me component update')
+    }
 
     handleDeleteUser = (user) => {
         console.log('>>> check user delete: ', user);

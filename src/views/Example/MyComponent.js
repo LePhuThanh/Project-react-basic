@@ -37,14 +37,22 @@ class MyComponent extends React.Component {
         })
     }
 
-    componentDidUpdate(preProps, preState) {
-        console.log('>>>run didupdate: ', 'pre state ', preState, 'current state ', this.state)
-    }
-
     componentDidMount() {
         console.log('>>> run component did mount ');
         //The place relevant to call API from backend
     }
+    componentDidUpdate(preProps, preState) {
+        console.log('>>>run component update: ', 'prestate ', preState, 'current state ', this.state)
+
+        if (this.state.arrJobs !== preState.arrJobs) {
+            if (this.state.arrJobs.length === 5) {
+                alert('You got 5 jobs')
+            }
+            console.log('>>>length arrJob: ', this.state.arrJobs.length)
+        }
+    }
+
+
     render() {
         console.log('>>>> call render: ', this.state)
 
