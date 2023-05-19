@@ -1,28 +1,13 @@
-// import React, { useState, useCallback } from "react";
-// import ContUseCallBack from "./ContUseCallBack";
+import React from "react";
 
-// const ExpUseCallBack = () => {
+// Necessary skills
+//1. memo() HOC
+//2. useCallBack()
+// -Reference types
+// -React memo()
+const ExpUseCallBack = () => {
 
-//     const [count, setCount] = useState(0)
 
-//     const handleIncrease = () => {
-//         setCount(prevCount => prevCount + 1)
-//     }
+}
 
-//     return (
-//         <>
-//             <div>
-//                 <p>useCallback is React Hook help me to create a 'memoized callback' and only create 'callback' when dependencies change</p>
-//                 <p>Input 2 parameter: function and dependencies</p>
-//                 <p>Return memoized callback</p>
-//                 <p>If use empty dependencies that it never create new function</p>
-//             </div>
-//             <div>
-//                 <ContUseCallBack onIncrease={handleIncrease} />
-//                 <h1>{count}</h1>
-//             </div>
-//         </>
-//     )
-// }
-
-// export default ExpUseCallBack;
+export default ExpUseCallBack;

@@ -3,7 +3,7 @@ import { React, memo } from "react";
 const Content = ({ count }) => {
     console.log('>>> check render: ', count);
     return (
-        <div>
+        <div style={{ color: 'white' }}>
             The number of Loop: {count}
         </div>
     )

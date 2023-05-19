@@ -1,0 +1,74 @@
+.container {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+
+  height: 100%; //100vh;
+  // display: flex;
+  flex-direction: column;
+  font-family: "Helvetica Neue";
+
+
+
+  // Block
+  .container__btn {
+    //display: inline-block;
+    text-decoration: none;
+    // background-color: transparent;
+    border: none;
+    outline: none;
+    color: #fff;
+    padding: 12px 48px;
+    border-radius: 50px;
+    cursor: pointer;
+    //Effective run in .2s
+    transition: opacity .2s ease;
+
+  }
+
+  .container__btn:hover {
+    opacity: 0.8;
+  }
+
+  // .btn+.btn {
+  //   margin-left: 16px;
+  // }
+
+  .btn--useState {
+    background-color: #71be34;
+  }
+
+  .btn--HOCMemo {
+    background-color: #ffb702;
+  }
+
+  .btn--useMemo {
+    background-color: #ff623d;
+
+  }
+
+  .btn--useEffect {
+    background-color: #1377ba;
+
+  }
+
+  .btn--useLayoutEffect {
+    background-color: #dd6fa3;
+
+  }
+
+  .btn--useRef {
+    background-color: #f4c27c;
+  }
+
+  .btn--useCallback {
+    background-color: #61ccbc;
+  }
+
+  //disabled
+  // .btn--disabled {
+  //   opacity: 0.5 !important;
+  // }
+
+
+}

@@ -2,7 +2,12 @@ import { React, useState } from "react";
 import Content from './Content'
 
 
-function MemoHOC() {
+// When we have component use multiple props in screen, It can re-render affect UI
+//The variety of UI
+//Set State dad component ? use multiple subcomponent + multiple UI + Complicated => memo 
+// Avoid unnescessary re-render
+
+function ExpMemoHOC() {
     const [count, setCount] = useState(0);
     const [count2, setCount2] = useState(0);
 
@@ -11,7 +16,7 @@ function MemoHOC() {
 
     return (
         <div>
-            <p>Count Memo: {count}</p>
+            <p style={{ color: 'red' }}>Count Memo: {count}</p>
             <p>Count NOT Memo: {count2}</p>
             <Content count={count}
             // onClick={handleExReactMemoClick}
@@ -24,4 +29,4 @@ function MemoHOC() {
     )
 }
 
-export default MemoHOC;
+export default ExpMemoHOC;

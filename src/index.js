@@ -19,6 +19,22 @@ import rootReducer from './store/reducers/rootReducer';
 //create reduxStore = createStore function, The data which we recharge is rootReducer 
 const reduxStore = createStore(rootReducer);
 
+// Fake comments || FakeChatApp
+//Customized event to emit a different event
+//EventEmiter
+const emitComment = (id) => {
+  setInterval(() => {
+    window.dispatchEvent(
+      new CustomEvent(`lesson-${id}`, {
+        detail: `Content comment of lesson-${id}`
+      })
+    )
+  }, 2000)
+}
+emitComment(1)
+emitComment(2)
+emitComment(3)
+
 
 ReactDOM.render(
   <React.StrictMode>

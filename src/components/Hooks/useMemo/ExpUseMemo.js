@@ -1,29 +1,70 @@
-import { React, useState, useMemo } from "react";
-
-function expensiveFunction(number) {
-    console.log('Start');
-    const start = new Date();
-
-    //Wait 3s
-    while ((new Date() - start) < 2000); //2s = 2000ms
-    console.log('Finish', new Date() - start, 'ms');
-    return number * number;
-}
+import React, { useState, useMemo, useRef } from "react";
+import Exp2 from "./Exp2";
 
 const ExpUseMemo = () => {
-    const [count, setCount] = useState(0);
-    const number = useMemo(() => {
-        return expensiveFunction(10);
-    }, [])
+
+    const [show1, setShow1] = useState(false)
+
+    const [name, setName] = useState()
+    const [price, setPrice] = useState()
+    const [products, setProducts] = useState([])
+
+    const nameRef = useRef()
+
+    const handldeSubmit = () => {
+        setProducts([...products, {
+            name,
+            //price: Number(price) //C1  convert from string to number
+            //price: parseInt(price) //C2
+            price: +price // C3 tip
+        }])
+        setName('')
+        setPrice('')
+
+        nameRef.current.focus()
+    }
+
+    //Calculation sum
+    const total = useMemo(() => {
+        const result = products.reduce((result, prod) => {
+            console.log(">>> Recalculation: ")
+            return result + prod.price
+        }, 0)
+        return result
+    }, [products])
 
     return (
-        <div>
-            <p>Like as useCallBack but return value</p>
-            <p>Count: {count}</p>
-            <button onClick={() => setCount(count + 1)}>Add</button>
-            <p>Number: {number}</p>
+        <div styles={{ padding: '10px 32px' }}>
+            <input
+                ref={nameRef}
+                value={name}
+                placeholder="Ënter name..."
+                onChange={e => setName(e.target.value)}
+            /> <br />
+            <input
+                value={price}
+                placeholder="Ënter price..."
+                onChange={e => setPrice(e.target.value)}
+            /> <br />
+            <button onClick={handldeSubmit}>Add</button>
+            <br />
+            Total: {total}
+            <ul>
+                {products?.map((product, index) => (
+                    <li key={index}>{product.name} - {product.price}</li>
+                ))}
+            </ul>
 
+            {/* Show Exp2 */}
+            <button onClick={() => setShow1(!show1)}>Ex2 After 2s will start</button>
+            {show1 &&
+                <div>
+                    <Exp2 />
+                </div>}
         </div>
     )
+
+
 }
+
 export default ExpUseMemo;
