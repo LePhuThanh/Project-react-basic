@@ -19,7 +19,12 @@ import ExpUseRef from "./useRef/ExpUseRef";
 import ExpMemoHOC from './ReactMemo/ExpMemoHOC';
 import ExpUseMemo from "./useMemo/ExpUseMemo";
 import ExpUseCallBack from "./useCallBack/ExpUseCallBack";
+//---------useReducer-----------------
+import ExpUseReducer from "./useReducer/ExpUseReducer";
+import TodoListUR from "./useReducer/TodoListUR";
+
 import './../../styles/Hook/HookExample.scss'
+
 
 const HookExample = () => {
     const [show1, setShow1] = useState(false)
@@ -29,6 +34,7 @@ const HookExample = () => {
     const [show5, setShow5] = useState(false)
     const [show6, setShow6] = useState(false)
     const [show7, setShow7] = useState(false)
+    const [show8, setShow8] = useState(false)
 
 
 
@@ -110,6 +116,17 @@ const HookExample = () => {
             </button>
             {show7 && <>
                 <ExpUseCallBack />
+            </>}
+            <br />
+
+            {/* //----------------------------------------- */}
+            <button className="container__btn btn--useReducer"
+                onClick={() => { setShow8(!show8) }}>
+                VIII. Go to the useReducer!
+            </button>
+            {show8 && <>
+                <ExpUseReducer />
+                <TodoListUR />
             </>}
             <br />
 

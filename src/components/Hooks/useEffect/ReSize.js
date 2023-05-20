@@ -1,3 +1,5 @@
+//Cleanup function
+
 import React, { useEffect, useState } from "react";
 
 const ReSize = () => {
@@ -23,7 +25,7 @@ const ReSize = () => {
 
     return (
         <div>
-            <div>1. Measure The Screen Size</div>
+            <h3 style={{ color: '#71bdf0' }}>1. Measure The Screen Size</h3>
             <button
                 stype={{ padding: 30 }}
                 onClick={handleShowSize}>
@@ -31,7 +33,7 @@ const ReSize = () => {
             </button> <br />
             {showSize && <>{width} {height}</>}
 
-        </div>
+        </div >
     )
 }
 export default ReSize;

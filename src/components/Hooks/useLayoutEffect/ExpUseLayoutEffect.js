@@ -33,6 +33,7 @@ const ExpUseLayoutEffect = () => {
     }
     return (
         <div>
+            <h3 style={{ color: '#f8a6cc' }}>1. Cyclic Count</h3>
             <h1>{count}</h1>
             <button onClick={handleRun}>Run</button>
         </div>

@@ -35,15 +35,16 @@ const ExpUseMemo = () => {
 
     return (
         <div styles={{ padding: '10px 32px' }}>
+            <h3 style={{ color: '#ebaea0' }}>1. Tool For Calculate Products's Sum  </h3>
             <input
                 ref={nameRef}
                 value={name}
-                placeholder="Ënter name..."
+                placeholder="Enter name..."
                 onChange={e => setName(e.target.value)}
             /> <br />
             <input
                 value={price}
-                placeholder="Ënter price..."
+                placeholder="Enter price..."
                 onChange={e => setPrice(e.target.value)}
             /> <br />
             <button onClick={handldeSubmit}>Add</button>
@@ -56,6 +57,7 @@ const ExpUseMemo = () => {
             </ul>
 
             {/* Show Exp2 */}
+            <h3 style={{ color: '#ebaea0' }}>2. Example Delay Function To Use UseMemo </h3>
             <button onClick={() => setShow1(!show1)}>Ex2 After 2s will start</button>
             {show1 &&
                 <div>

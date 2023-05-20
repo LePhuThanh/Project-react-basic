@@ -17,7 +17,8 @@ const Gift = () => {
         setGift(gifts[index]);
     }
     return (
-        <div style={{ padding: 5 }}>
+        <div>
+            <h3 style={{ color: '#a8ea73' }}>3. Gift App</h3>
             <p><b>{gift || 'No Gift Yet'}</b></p> {/* if there is gift => display 'gift', opposite display 'no gift yet'*/}
             <button onClick={randomGift}>Give gift</button>
 

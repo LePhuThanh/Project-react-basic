@@ -53,9 +53,11 @@ const ExpUseState = () => {
             <p>Input 2 parameter: function and dependencies</p>
             <p>Return memoized callback</p>
             <p>If use empty dependencies that it never create new function</p> */}
-            <p>{counter}</p>
+            <h3 style={{ color: '#a8ea73' }}>1. Calculate The Number's Sum Of The Array</h3>
+            <h1>{counter}</h1>
             <button onClick={handleIncrease}> Increase</button>
 
+            <h3 style={{ color: '#a8ea73' }}>2. Update The String</h3>
             <p>{JSON.stringify(info)}</p>
             <button onClick={handleUpdate}>Update</button>
         </div>

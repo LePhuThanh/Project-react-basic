@@ -92,7 +92,7 @@ const ExpUseEffect = () => {
 
     return (
         <>
-            <div>2. Fetch data</div>
+            <h3 style={{ color: '#71bdf0' }}>2. Fetch Data</h3>
             <div>
                 {tabs?.map(tab => (
                     <button

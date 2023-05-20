@@ -50,6 +50,7 @@ const ExpUseRef = () => {
 
     return (
         <div style={{ padding: 20 }}>
+            <h3 style={{ color: '#f0e1bd' }}>1. Increase & Decrease Tool</h3>
             <h1 ref={h1Ref} style={{ color: "yellow" }}>{count}</h1>
             <button onClick={handleStart}>Start</button>
             <button onClick={handleStop}>Stop</button>

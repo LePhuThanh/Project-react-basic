@@ -32,6 +32,7 @@ const FakeChatApp = () => {
 
     return (
         <div>
+            <h3 style={{ color: '#71bdf0' }}>5. Fake Comment Two Thread </h3>
             <ul>
                 {lessons?.map(lesson => (
                     <li

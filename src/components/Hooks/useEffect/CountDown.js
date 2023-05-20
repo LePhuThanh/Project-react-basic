@@ -14,6 +14,7 @@ const CountDown = () => {
         const timerId = setInterval(() => {
             setCountdown(prevState => prevState - 1)
             //console.log(">>> Countdow ")
+
             //setCountdown(countdown - 1)
             //console.log('>>> Countdow', countdown) //Closure
         }, 1000)
@@ -32,7 +33,7 @@ const CountDown = () => {
 
     return (
         <div>
-            <div>3. Countdown</div>
+            <h3 style={{ color: '#71bdf0' }}>3. Countdown</h3>
             <button
                 stype={{ margin: 30 }}
                 onClick={handleShowCountdown}>

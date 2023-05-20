@@ -31,6 +31,7 @@ const TodoListHook = () => {
     return (
 
         <div style={{ padding: 30 }}>
+            <h3 style={{ color: '#a8ea73' }}>6. TodoList Use UseState + Local Storage</h3>
             <input
                 value={job}
                 onChange={e => setJob(e.target.value)}

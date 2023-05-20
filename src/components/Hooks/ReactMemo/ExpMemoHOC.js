@@ -16,7 +16,8 @@ function ExpMemoHOC() {
 
     return (
         <div>
-            <p style={{ color: 'red' }}>Count Memo: {count}</p>
+            <h3 style={{ color: '#f4c27c' }}>1. Passing Props Subcomponent</h3>
+            <p style={{ color: '#99f57c' }}>Count Memo: {count}</p>
             <p>Count NOT Memo: {count2}</p>
             <Content count={count}
             // onClick={handleExReactMemoClick}

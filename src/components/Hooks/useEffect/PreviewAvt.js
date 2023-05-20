@@ -24,7 +24,7 @@ const PreviewAvt = () => {
     }
     return (
         <div>
-            <div>4. Preview Avatar</div>
+            <h3 style={{ color: '#71bdf0' }}>4. Preview Avatar</h3>
 
             <input
                 type="file"
