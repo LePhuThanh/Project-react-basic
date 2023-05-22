@@ -15,34 +15,26 @@ import './styles/global.scss';
 import { Provider } from 'react-redux';
 import { createStore } from 'redux';
 import rootReducer from './store/reducers/rootReducer';
+//---------useContext----------
+import { ThemeProvider } from './components/Hooks/useContext/ThemeContext'
+
 
 //create reduxStore = createStore function, The data which we recharge is rootReducer 
 const reduxStore = createStore(rootReducer);
 
-// Fake comments || FakeChatApp
-//Customized event to emit a different event
-//EventEmiter
-const emitComment = (id) => {
-  setInterval(() => {
-    window.dispatchEvent(
-      new CustomEvent(`lesson-${id}`, {
-        detail: `Content comment of lesson-${id}`
-      })
-    )
-  }, 2000)
-}
-emitComment(1)
-emitComment(2)
-emitComment(3)
+
 
 
 ReactDOM.render(
   <React.StrictMode>
     {/* Provider permits the Redux and React to start at the same time*/}
     {/* We must recharge(reduxStore) into the store */}
-    <Provider store={reduxStore}>
-      <App />
-    </Provider>
+
+    <ThemeProvider>
+      <Provider store={reduxStore}>
+        <App />
+      </Provider>
+    </ThemeProvider>
 
   </React.StrictMode>,
   document.getElementById('root')

@@ -21,9 +21,16 @@ import ExpUseMemo from "./useMemo/ExpUseMemo";
 import ExpUseCallBack from "./useCallBack/ExpUseCallBack";
 //---------useReducer-----------------
 import ExpUseReducer from "./useReducer/ExpUseReducer";
-import TodoListUR from "./useReducer/TodoListUR";
+import TodoListUR from "./useReducer/TodoListUR/TodoListUR";
 
+import ExpUseContext from "./useContext/ExpUseContext";
+//========global state useContext
+import TodoApp from "./useContext/TodoApp";
+import { StoreProvider } from '../Hooks/useContext/store';
+
+import ExpUseImperativeHandle from "./useImperativeHandle/ExpUseImperativeHandle";
 import './../../styles/Hook/HookExample.scss'
+
 
 
 const HookExample = () => {
@@ -35,8 +42,8 @@ const HookExample = () => {
     const [show6, setShow6] = useState(false)
     const [show7, setShow7] = useState(false)
     const [show8, setShow8] = useState(false)
-
-
+    const [show9, setShow9] = useState(false)
+    const [show10, setShow10] = useState(false)
 
     return (
         //Write scss following BEM standard
@@ -127,6 +134,29 @@ const HookExample = () => {
             {show8 && <>
                 <ExpUseReducer />
                 <TodoListUR />
+            </>}
+            <br />
+
+            {/* //----------------------------------------- */}
+            <button className="container__btn btn--useContext"
+                onClick={() => { setShow9(!show9) }}>
+                IX. Go to the useContext!
+            </button>
+            {show9 && <>
+                <ExpUseContext />
+                <StoreProvider>
+                    <TodoApp />
+                </StoreProvider>
+            </>}
+            <br />
+
+            {/* //----------------------------------------- */}
+            <button className="container__btn btn--useImperativeHandle"
+                onClick={() => { setShow10(!show10) }}>
+                IX. Go to the useImperativeHandle!
+            </button>
+            {show10 && <>
+                <ExpUseImperativeHandle />
             </>}
             <br />
 
